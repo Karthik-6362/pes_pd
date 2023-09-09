@@ -81,6 +81,18 @@
 
 </details>
 
+<details>
+  <summary>SoC design and OpenLANE:-  </summary>
+
+
+</details>
+
+
+
+
+
+
+
 
 
 
