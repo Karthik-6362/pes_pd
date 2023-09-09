@@ -63,7 +63,8 @@
   
 - We use Binary language to talk with the hardware,but in real life we use high level language on apps to use them.
 - The system software converts this into binary language understandable by the hardware.
-- ![Uploading Interface bw Layout and RISCV.png…]()
+- ![Interface bw Layout and RISCV](https://github.com/Karthik-6362/pes_pd/assets/137412032/1a2a6571-fd60-4c06-8568-776ebebb5bab)
+
 - 
 
 
@@ -71,9 +72,22 @@
 
 
 
+
+
+
+
+
+
+
 </details>
+
+
 
 
 </details>
 
-</details>
+
+
+
+
+
