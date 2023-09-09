@@ -24,20 +24,27 @@
 
 <details>
   <summary> Introduction to QFN-48 package:- :- </summary>
-> A QFN-48 (Quad Flat No-Leads 48) is a type of surface-mount integrated circuit (IC) package.
-> The "48" in QFN-48 refers to the number of these metal pads on the package.
+  > A QFN-48 (Quad Flat No-Leads 48) is a type of surface-mount integrated circuit (IC) package.
+  > The "48" in QFN-48 refers to the number of these metal pads on the package.
 
 ### Basic Arduino board:-
 ![QNF 48 arduino board](https://github.com/Karthik-6362/pes_pd/assets/137412032/3befec93-4df7-4ec6-a1a6-35048a1ee4b1)
 
 ### Block diagram if a basic processor/chip :- 
 > SDRAM:-  Synchronous Dynamic Random Access Memory.
+
 > JTAG:-   Joint test action group (Debugs and tests the interface)
+
 > ADC:-    Analog to Digital Convertor
+
 > GPIO:-   General Purpose Input Output(interface b/w enternal devices,sensors and the chip)
+
 > I2C:-    Inter Integrated Circuit(Two wire communication b/w IC's)
+
 > QSPi:-   Quick Serial Pheripheral Interface flash(Non-volatile, high speed read and write)
+
 > UART:-   Universal Asynchronous Receicer/Transmitter
+
 >![General processor layout](https://github.com/Karthik-6362/pes_pd/assets/137412032/ab7e1e80-b707-44c4-89a2-06a6efd2e31e)
 
 ### Package of QNF-48:- 
