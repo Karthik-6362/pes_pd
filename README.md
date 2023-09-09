@@ -18,10 +18,15 @@
   - Verification:- ![Screenshot 2023-09-08 145810](https://github.com/Karthik-6362/pes_pd/assets/137412032/3a94ba2f-d2e5-4303-ab4c-301b3ceb3cfe)
 
 
+
 <details>
-  <summary>Inception of open-source EDA, OpenLANE and Sky130 PDK :- </summary>
+  <summary> DAY_1 :- Inception of open-source EDA, OpenLANE and Sky130 PDK :- </summary>
 
 <details>
   <summary>How to talk to a computer :- </summary>
+
+> We use Binary language to talk with the hardware,but in real life we use high level language on apps to use them.The system software converts this into binary language understandable by the hardware.
+> 
 </details>
+
 </details>
