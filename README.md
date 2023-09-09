@@ -24,8 +24,9 @@
 
 <details>
   <summary> Introduction to QFN-48 package:- :- </summary>
-  > A QFN-48 (Quad Flat No-Leads 48) is a type of surface-mount integrated circuit (IC) package.
-  > The "48" in QFN-48 refers to the number of these metal pads on the package.
+  
+- A QFN-48 (Quad Flat No-Leads 48) is a type of surface-mount integrated circuit (IC) package.
+- The "48" in QFN-48 refers to the number of these metal pads on the package.
 
 ### Basic Arduino board:-
 ![QNF 48 arduino board](https://github.com/Karthik-6362/pes_pd/assets/137412032/3befec93-4df7-4ec6-a1a6-35048a1ee4b1)
