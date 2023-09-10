@@ -84,6 +84,72 @@
 <details>
   <summary>SoC design and OpenLANE:-  </summary>
 
+## Requirements for a ASIC design:-  
+![Requirements for asic](https://github.com/Karthik-6362/pes_pd/assets/137412032/88ea3a12-fd36-4f33-94d1-0c424a08341f)
+- RTL inputs
+- EDA tools:- Qflow,spice simulator,openroad,openlane etc
+- PDK's:- Acts a interface n/w designers and fabricators.
+- - Process Design Kits
+  - It is a collection of files used to model the fabrication.
+  - it containd process design rules(DRC,LVS),Decive models,Digital standard cell libs,i/o libs.
+
+
+- Is PDK opensource?
+- Google collaberated with skywater to opensource FOSS 130nm 
+
+## ASIC design flow (RTL to GDSII) :- 
+![Simplified RTL to GDSII ](https://github.com/Karthik-6362/pes_pd/assets/137412032/01271183-a91d-4039-b17a-1cf462baed27)
+
+- Synthesis:- Converts RTL design into a netlist out of components from the standard cell library.
+- ![synthesis](https://github.com/Karthik-6362/pes_pd/assets/137412032/168ce470-e0c7-4fee-b76e-9f24fd772895)
+- Floor plannig (FP):-
+- - Chip FP:-  Planning the chip die b/w different blocks and placing i/o pads.
+  - Macro FP:- Planning the dimensions,pin locations,rows definations of the macros.
+- Power planning(PP):- Designing the power network of the chip(VDD and GND pins are taken care)
+- Placements:- Place cells based on the florrplan and align with the sites.
+- - To reduce the interconnect delay and get a successfull routing.
+  - Global:-   Optimal position for all cells where the cells can overlap.
+  - Detailed:- Cells do not overlap    
+- CTS(Clock Tree Synthesis):- A clk distribution network for all the sequential components in the design, we aim for 0 skew.
+- Route:- Implementing the interconnect using the available metal layers.
+- - Global routing:- Generating the routing guides.
+  - Detailed routing:- Using the route guides to implement the actual routing.
+- Sign Off:- Verifying the following aspects
+- - Physical Verifications:- DRC(Design Rules Checking) and LVS(Layout V/s Schematic)  
+- - Timing Verifications:-   STA(Static Timing Analysis)
+
+
+## Intoduction to openLANE and Strives chipsets
+- OpenLane:- The goal is to produce a clean GDSII without human intervenations.
+- - With No DRC and LVS violations.
+- - Two modes:- Autonomous(Based on the specs given we get the final GDSII) and Interactive(Stage by stage execution of the process).
+
+### Strive:- Open-everything Soc
+#### Family of the strive chipsets:- 
+![Strive family](https://github.com/Karthik-6362/pes_pd/assets/137412032/aab8a45f-089f-4a2d-b633-68c6d4e9296e)
+
+
+## OpenLANE detailed ASIC design flow:- 
+![Opemlane asic flow](https://github.com/Karthik-6362/pes_pd/assets/137412032/a27e20c5-784a-4cbe-9b5d-6239ea348708)
+
+- RTL Synthesis:- Done using YOSYS and abc (produces synthesized netlist).
+### Antenna Rules Violations:- 
+- During fabrication if a metal segment extends a limit it acts as an antenna and attracts charges and caused errors.
+- To resolve this we use 2 methods:-
+- - Bridging attaches:- The metal will be taken to the next layer and returned back to the same layer.
+  - Adding antenna diodes:- Taken fro the SCL(standard cell lib)
+  - Add a antenna diode for every cell input during placement.
+  - Use Magic to check for rules violations.
+  - If there are any violations, replace the diode with a real one.
+- Static Timing Analsys:- RC extraction( DEF2SPEF) and  STA (openSTA,openROAD)
+
+
+
+
+
+
+
+
 
 </details>
 
