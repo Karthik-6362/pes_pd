@@ -156,6 +156,8 @@
 ### Exploring the .lib files in sky130:- 
 - libs.tech  :- specific to the tool 
 - libs.ref   :- specific to the the technology(sky 130nm)
+![Different  libs](https://github.com/Karthik-6362/pes_pd/assets/137412032/2b409a5e-1fb4-4a75-bfac-79d79d1d826d)
+
 
 ### Defination of sky130_fd_sc_hd :- 
 - sky130 :- process name
@@ -170,11 +172,39 @@
 
 ## Design preparation step:- 
 
+```
+cd/desktop/works/tools/openlane_workshop__dir/openlane   // Changes the directory to openlane.
+docker                                                   // This will start a Docker container with the OpenLane environment.                            
+./flow.tcl -interactive                                  // OpenLane runs in interactive mode.
+package require openlane 0.9                             // Loads the package.
+prep -design picorv32                                    // Loads the design and merges the cell level lef and tech level lef and after this a new dir "runs" will be created
+run synthesis                                            // runs the YOSYS synthesis and abc also
+```
+
+#### Design available in Openlane:- 
+![Design available](https://github.com/Karthik-6362/pes_pd/assets/137412032/04596bf2-bebc-42b4-b6f9-cdcfd5e6815c)
+- We will be using PICORV32a
+
+#### Files in PICORV32a:- 
+- ![Files in picorv32a](https://github.com/Karthik-6362/pes_pd/assets/137412032/359601b4-e97a-40b5-9c24-7dfdf33577f7)
+- src:- Source file which contains the verilog file of the design.
+- ![Contents of src file in picorv32](https://github.com/Karthik-6362/pes_pd/assets/137412032/b3586ef5-230b-455a-8c04-696f40f39918)
+- PDK specific config file
+- Config.tcl:- Gives the specifications of the operations.
+- ![image](https://github.com/Karthik-6362/pes_pd/assets/137412032/8b0d0110-c4b2-4df4-8b46-138a38cb6196)
+
+#### Content of runs:-
+![New folder runs created](https://github.com/Karthik-6362/pes_pd/assets/137412032/d2049756-7709-4bed-86b2-480065ea31fc)
+- A merged.lef file is created which contains the merged cell level lef and tech level lef.
+![Merged lef created in tmp](https://github.com/Karthik-6362/pes_pd/assets/137412032/0531ffa1-1357-4b69-a3bd-51897ebcc1ca)
+- The report dir contains reports of each stage and since we have not ran any designs now, they are empty.
+![Contents of report dir](https://github.com/Karthik-6362/pes_pd/assets/137412032/13bea6ca-ae3c-474d-b6ed-0cd38bb808fc)
+
+- config.tcl gives all the default values used.
 
 
 
-
-
+#### Finding flot_ratio(Number of D-flipflops) after synthesis:- 
 
 
 
