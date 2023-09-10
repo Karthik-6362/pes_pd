@@ -143,6 +143,37 @@
   - If there are any violations, replace the diode with a real one.
 - Static Timing Analsys:- RC extraction( DEF2SPEF) and  STA (openSTA,openROAD)
 
+</details>
+
+
+<details>
+  <summary>Get familiar to Open-source EDA tools</summary>
+
+## OpenLANE Directory structure in detail:- 
+
+- Main reason for openlane is to have a flow from RTL to GDSII
+
+### Exploring the .lib files in sky130:- 
+- libs.tech  :- specific to the tool 
+- libs.ref   :- specific to the the technology(sky 130nm)
+
+### Defination of sky130_fd_sc_hd :- 
+- sky130 :- process name
+- fd :-     skywater foundary name
+- sc :-     standard cell
+- hd:-      high density,variant of the pdk
+
+### Conents of the  sky130_fd_sc_hd pdk:- 
+![Contents of  sky130_fd_sc_hd](https://github.com/Karthik-6362/pes_pd/assets/137412032/5fd64b12-52db-4670-b251-8b285c6aed98)
+- has different files for different tools
+
+
+## Design preparation step:- 
+
+
+
+
+
 
 
 
@@ -152,7 +183,6 @@
 
 
 </details>
-
 
 
 
