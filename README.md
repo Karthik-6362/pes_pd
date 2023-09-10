@@ -1,4 +1,4 @@
-![Interface bw Layout and RISCV](https://github.com/Karthik-6362/pes_pd/assets/137412032/daa767ec-010e-4359-805e-28a765765a7e)# PES_PD
+# PES_PD
 # ADVANCED PHYSICAL DESIGN USING OPENLANE/SKY130
 
 ## Openlane:- OpenLane is an open-source digital ASIC (Application-Specific Integrated Circuit) design flow framework. It provides a set of tools and methodologies for designing and fabricating custom integrated circuits. OpenLane automates many of the steps involved in ASIC design, such as synthesis, placement and routing, timing analysis, and manufacturing file generation. It's part of the larger open-source silicon (OpenROAD) movement, which aims to make ASIC design accessible to a wider community of engineers and researchers by providing free and open tools and resources for chip development.
