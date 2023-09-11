@@ -18,9 +18,9 @@
   - Verification:- ![Screenshot 2023-09-08 145810](https://github.com/Karthik-6362/pes_pd/assets/137412032/3a94ba2f-d2e5-4303-ab4c-301b3ceb3cfe)
 
 
-
+# DAY_1:- 
 <details>
-  <summary> DAY_1 :- Inception of open-source EDA, OpenLANE and Sky130 PDK :- </summary>
+  <summary>Inception of open-source EDA, OpenLANE and Sky130 PDK :- </summary>
 
 
 ## Introduction to QFN-48 package:-
@@ -206,17 +206,24 @@ run synthesis                                            // runs the YOSYS synth
 
 #### Finding flot_ratio(Number of D-flipflops) after synthesis:- 
 
+![Finding flop ratio](https://github.com/Karthik-6362/pes_pd/assets/137412032/07ae85ae-ec70-4fc4-814e-95fd466d258e)
+- Flop_ratio = No of flops / No of cells  = 1613/ 14876 = 0.108 =10.8%
 
+Analysing the runs dir:- 
+- There is a new file is created which consists of the synthesized netlist and before synthesis this folder was empty.
+![Synthesized netlist](https://github.com/Karthik-6362/pes_pd/assets/137412032/0cab95a5-00b2-4871-971b-56ab5be8e141)
 
-
-
+- Reports generated:-
+![Location of the reports](https://github.com/Karthik-6362/pes_pd/assets/137412032/d16a6eb2-8ca0-4724-ae3e-48b090046439)
 
 
 </details>
 
 
 
-
+<details>
+  <summary></summary>
+</details>
 
 
 
