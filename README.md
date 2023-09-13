@@ -1,4 +1,4 @@
-# PES_PD
+![deco cap](https://github.com/Karthik-6362/pes_pd/assets/137412032/a756d1e8-cce4-4d55-baad-15e725f37067)# PES_PD
 # ADVANCED PHYSICAL DESIGN USING OPENLANE/SKY130
 
 ## Openlane:- OpenLane is an open-source digital ASIC (Application-Specific Integrated Circuit) design flow framework. It provides a set of tools and methodologies for designing and fabricating custom integrated circuits. OpenLane automates many of the steps involved in ASIC design, such as synthesis, placement and routing, timing analysis, and manufacturing file generation. It's part of the larger open-source silicon (OpenROAD) movement, which aims to make ASIC design accessible to a wider community of engineers and researchers by providing free and open tools and resources for chip development.
@@ -246,7 +246,7 @@ Analysing the runs dir:-
 </details>
 
 <details>
-  <summary>Define locations of preplaced cells:- </summary>
+  <summary>2. Define locations of preplaced cells:- </summary>
 
 - Suppose we have a comb logic which has large number of gates.
 - It can be split into different blocks and can be reused when ever needed.  
@@ -258,26 +258,52 @@ Analysing the runs dir:-
 - Generally placed near the inputs.
 - surrounded by decoupling capacitors.
 
+</details>
 
 
+<details>
+  <summary>3. De-Coupling Capacitors:- </summary>
 
+![deco cap](https://github.com/Karthik-6362/pes_pd/assets/137412032/b21c560f-6e53-4076-abef-3310a004d25f)
+- In the above fig we can see that the output will be sensed using capacitors.
+- In order to get o/p as 1 vdd has to provide the voltage of high.
+- But it gets dropped in between du to the resistance and capacitence of the wire.
+![Screenshot 2023-09-13 183240](https://github.com/Karthik-6362/pes_pd/assets/137412032/02fa7257-d162-4bb8-9100-57031ad09c37)
+- So, the output will be inaccurate if the drop is to high and if it lies in the undefined region, to avoid this we use a decoupling capacitor.
+- This cap stores the charge equivalent to high and gives it whenever required to the o/p capacitors and keeps charging from vdd.
+- We also need to reduce the wire length to avoid this.
+![added](https://github.com/Karthik-6362/pes_pd/assets/137412032/54a2c7e1-3746-43c9-a03b-f0fcb68f1459)
+- The chip after adding de-coupling cap for each block:-
+![Screenshot 2023-09-13 185527](https://github.com/Karthik-6362/pes_pd/assets/137412032/7aed444c-924b-4527-9e2b-9d866dad661d)
 
+</details>
 
-
-
-
-
-
-
-
-
-
-
-
-
+<details>
+  <summary> </summary>
 
 
 </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
