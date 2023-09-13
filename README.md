@@ -220,12 +220,64 @@ Analysing the runs dir:-
 </details>
 
 
-# DAY_2:- 
+# DAY_2:- Good floorplan vs bad floorplan and introduction to library cells
+
 <details>
-  <summary></summary>
+
+  <summary> 1. Defining the height and the width of core and die:-  </summary>
+
+- The first step in physical design:- Dertmining the height(H) and width(W) of the floor.
+- ![Width and height](https://github.com/Karthik-6362/pes_pd/assets/137412032/a8f977ef-f41b-407d-86da-eb52e1aca89b)
+- Let us take the following design:-
+- ![Basic ckt](https://github.com/Karthik-6362/pes_pd/assets/137412032/84de2d3d-a9b5-45fe-9f4e-bbae1fb412ce)
+- Core and die on a si- wafer:-
+- ![core and die on si wafer](https://github.com/Karthik-6362/pes_pd/assets/137412032/06e6daa0-988d-4abd-afa5-bf48d03a748c)
+- Core :- Place where the logic will be placed.
+- Die  :- The boundary surrounding the core.
+- Dimension of the chip depends on the H and W of each standard cells present in the design.
+- Next, we calculate the area required for all the cells.(Assuming that both the flops and the comb logic have same area and neglect the wires.)
+- The area will be 4sq units.
+- ![Calcutating area](https://github.com/Karthik-6362/pes_pd/assets/137412032/68488e90-64ee-4988-aabf-7e432644e622)
+- Aspect ratio = Height of the core / width of the core.
+- If aspect ratio = 1, the chip is square else it is not.
+- Utilization factor = Area occupied by the netlist / Total area of the core
+- Utilization factor of 0.5 -0.6 is preffered.
+
 </details>
 
+<details>
+  <summary>Define locations of preplaced cells:- </summary>
 
+- Suppose we have a comb logic which has large number of gates.
+- It can be split into different blocks and can be reused when ever needed.  
+- ![splitting comb](https://github.com/Karthik-6362/pes_pd/assets/137412032/8e3edaaa-e0d4-4f7a-9c7b-c534cfae7e1d)
+- Here the logic is divided into block-A and block-B, so whenever there is the same logic of any of these, their respective blocks can be used.
+- ![blocks can be reused](https://github.com/Karthik-6362/pes_pd/assets/137412032/0a52d32f-b892-45d9-80ec-ba387bc67300)
+
+### Pre-placed cells:- The blocks like memory,comperator,mut etc which are present in the top level module and are placed first on to the floor and their locations are not altered are called pre-placed cells.
+- Generally placed near the inputs.
+- surrounded by decoupling capacitors.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</details>
 
 
 
