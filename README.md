@@ -340,15 +340,45 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 Standard cells:- 
 ![std cells](https://github.com/Karthik-6362/pes_pd/assets/137412032/41b5b5a1-b629-4526-ae3d-5b7d5c627a2e)
 
-
-
-
-
 </details>
 
 
+<details>
+  <summary>Cell design and characterization flows:- </summary>
 
+- standard cells are kept in the libraries,its also consists of different sizes,threshold voltage and delays of the same component.
+![std cells](https://github.com/Karthik-6362/pes_pd/assets/137412032/cfeb5e9d-854a-4d35-81d3-17561cea827b)
 
+CELL DESIGN FLOW:- 
+- inputs      : inputs needed to design the inverter(based pn PDK's).
+- design steps: designing of the inverter(logic and functionality).
+- output      : outputs are the ones that are given to the EDA tools
+
+CIRCUIT DESIGN FLOW:-
+- The seperation between the power rail and ground rails decides the Cell Height and it is responsible by the library developer that the cell height cell is maintained.
+![Screenshot 2023-09-17 233346](https://github.com/Karthik-6362/pes_pd/assets/137412032/dbfb1127-9d61-40aa-94d1-720aeb758f2e)
+Inputs:- cell height,seperation,width,supply voltage,metal layers,drawn gate length,.
+Steps:-
+1. Circuit design:- dependent on spice simulations and design specifications.
+2. Output:- CDL(Circuit Design Language) file 
+
+LAYOUT DESIGN:-
+- Getting the PMOS and NMOS network graphs out of the implemented design.
+- Eulers path and stick diagram.
+- Eulers path:- Traced only once
+- Output:- GDS2, .lef(contains width and height of the cell),extracted spice netlist. 
+
+![Screenshot 2023-09-17 234837](https://github.com/Karthik-6362/pes_pd/assets/137412032/0bc456fe-f667-483e-b502-4ab28e4918aa)
+
+Charecterisation:-
+
+Consider the following buffer:-
+![Screenshot 2023-09-17 235628](https://github.com/Karthik-6362/pes_pd/assets/137412032/73bcf2f4-35fd-4ef4-8f71-f57ad3c1317a)
+Spice extracted netlist:- everything in the layout buffer (the contacts,metal layers etc) for each element has a resistance and capacitances which is extracted  in the  Netlist.
+![Screenshot 2023-09-17 235733](https://github.com/Karthik-6362/pes_pd/assets/137412032/4098e15a-3f1c-4b0d-ba12-c028c646d65f)
+sub circuit file contains the actual PMOS and NMOS models
+
+</details>
 
 
 
