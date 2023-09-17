@@ -222,6 +222,7 @@ Analysing the runs dir:-
 # DAY_2:- Good floorplan vs bad floorplan and introduction to library cells
 
 <details>
+<summary>Good floorplan vs bad floorpla</summary>
   
 ### Defining the height and the width of core and die:- 
 
