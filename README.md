@@ -221,7 +221,8 @@ Analysing the runs dir:-
 
 # DAY_2:- Good floorplan vs bad floorplan and introduction to library cells
 
-
+<details>
+  
 ### Defining the height and the width of core and die:- 
 
 - The first step in physical design:- Dertmining the height(H) and width(W) of the floor.
@@ -271,8 +272,24 @@ Defining the  locations of preplaced cells:-
 ![Screenshot 2023-09-13 185527](https://github.com/Karthik-6362/pes_pd/assets/137412032/7aed444c-924b-4527-9e2b-9d866dad661d)
 
 
+### Power Planning:- 
+![Power supply](https://github.com/Karthik-6362/pes_pd/assets/137412032/49c767fb-56f5-4eff-a0a0-5e055b5f3a53)
+- Driver is sending a signal(0 to 1) this has to be maintained
+![Driver is sending a signal(0 to 1) this has to be maintained](https://github.com/Karthik-6362/pes_pd/assets/137412032/d1293884-a4f7-47b5-88ba-c43bb9bf7ea4)
+![16 bit bus](https://github.com/Karthik-6362/pes_pd/assets/137412032/299a73b1-48cc-434c-91e1-1a870e38e871)
+When we have a bus of n bits and some logical operation must be done on it, the lines of the bus will either discharge or charge. When multiple capacitors discharge to VSS, the voltage of VSS might increase (ground bounce). When multiple capacitors charge to VDD, the voltage of VDD might decrease (voltage droop). Thus instead of power coming from one source, if it comes from multiple sources, we can avoid signals going into the undefined area.
 
 
+
+### Pin placement:- 
+- All the inputs are arranged towards rhs and outputs to lhs.
+- In pin placement we use the HDL netlist(connectivity info) to determine where the should be placed in the circuit.
+- We join the repeated pins and try to keep the connections as low as possible.
+- Pins are then placed in the Die area.
+
+
+
+</details>
 
 
 
