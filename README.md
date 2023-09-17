@@ -222,7 +222,7 @@ Analysing the runs dir:-
 # DAY_2:- Good floorplan vs bad floorplan and introduction to library cells
 
 <details>
-<summary>Good floorplan vs bad floorpla</summary>
+<summary>Good floorplan vs bad floorplam:- </summary>
   
 ### Defining the height and the width of core and die:- 
 
@@ -288,11 +288,34 @@ When we have a bus of n bits and some logical operation must be done on it, the 
 - We join the repeated pins and try to keep the connections as low as possible.
 - Pins are then placed in the Die area.
 
+### Floorplan in magic:- 
+```
+run_flooorplan      // in the docker, it will give the floorplan
+cd /Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/14-09_17-44/results/floorplan  // vhange directory  
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &               // Gives the floorplan in magic
+```
+![first page](https://github.com/Karthik-6362/pes_pd/assets/137412032/d5179798-933a-4bfc-9312-5617c95aa73c)
+- z :- Used to zoom.
+- s :- Used to select an object.
+- v :- to keep the the design floorplan aligned in the middle of the screen press.
+- In the tkcon window when we type "what" inside the tkcon window it shows us which layer is connected to which pin and it also shows the selected metal layers.
+Layer in which pin is placed
+![what](https://github.com/Karthik-6362/pes_pd/assets/137412032/4c6a5bce-5ae7-45f9-856e-9f8b536d2316)
+
+Standare cells:-
+![std cells](https://github.com/Karthik-6362/pes_pd/assets/137412032/97241812-dfde-4043-8528-1947e6b5f965)
 
 
 </details>
 
 
+
+
+<details>
+  <summary>Library Cells:-</summary>
+
+
+</details>
 
 
 
