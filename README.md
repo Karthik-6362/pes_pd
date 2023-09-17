@@ -291,7 +291,7 @@ When we have a bus of n bits and some logical operation must be done on it, the 
 ### Floorplan in magic:- 
 ```
 run_flooorplan      // in the docker, it will give the floorplan
-cd /Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/14-09_17-44/results/floorplan  // vhange directory  
+cd /Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/14-09_17-44/results/floorplan  // change directory  
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &               // Gives the floorplan in magic
 ```
 ![first page](https://github.com/Karthik-6362/pes_pd/assets/137412032/d5179798-933a-4bfc-9312-5617c95aa73c)
@@ -312,7 +312,36 @@ Standare cells:-
 
 
 <details>
-  <summary>Library Cells:-</summary>
+  <summary> Library Binding and Placement:-</summary>
+
+
+###  Netlist binding and initial place design:- 
+All the gates are represented as boxes each components are given proper shape library has all the height,width,delay informations of a particular cell and the required conditions of the cell,libraries can be further divided by shape/size and delay information. Libraries also contain different types of the same particular cell.
+Consider the following netlist:- 
+[Netlist](https://github.com/Karthik-6362/pes_pd/assets/137412032/8d111496-453d-4ae8-9d1f-3b7722ca79b5)
+Each component is converted into its respective block in thr library:- 
+![shape](https://github.com/Karthik-6362/pes_pd/assets/137412032/0caaaec4-e25a-4d74-bfb3-94ebd4bec827)
+
+### Placement:- 
+
+- The physical view of the netlist is placed in the core.
+- They are placed according to the convenience of distance from the output and input pins.
+- When sending signal from FF1 to FF2, according to the circuit requirements, there has to be a very fast propogation of signals. Hence, they are placed very close and buffers are added since there is a small delay for the signal from the pin to reach FF1.
+- The buffers(repeaters) maintain signal integrity.
+- we also need to estimate the capacitence and the wire length required.
+![optimising placement](https://github.com/Karthik-6362/pes_pd/assets/137412032/cacc0978-a7f6-47aa-94c6-0d40332353cc)
+
+```
+run_placement
+cd /Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/14-09_17-44/results/floorplan  // change directory  
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &               // Gives the placement in magic 
+```
+![placement](https://github.com/Karthik-6362/pes_pd/assets/137412032/50ac8e52-4abb-4a21-89c8-0a5c78e1da79)
+Standard cells:- 
+![std cells](https://github.com/Karthik-6362/pes_pd/assets/137412032/41b5b5a1-b629-4526-ae3d-5b7d5c627a2e)
+
+
+
 
 
 </details>
