@@ -221,9 +221,8 @@ Analysing the runs dir:-
 
 # DAY_2:- Good floorplan vs bad floorplan and introduction to library cells
 
-<details>
 
-  <summary> 1. Defining the height and the width of core and die:-  </summary>
+### Defining the height and the width of core and die:- 
 
 - The first step in physical design:- Dertmining the height(H) and width(W) of the floor.
 - ![Width and height](https://github.com/Karthik-6362/pes_pd/assets/137412032/a8f977ef-f41b-407d-86da-eb52e1aca89b)
@@ -242,10 +241,8 @@ Analysing the runs dir:-
 - Utilization factor = Area occupied by the netlist / Total area of the core
 - Utilization factor of 0.5 -0.6 is preffered.
 
-</details>
 
-<details>
-  <summary>2. Define locations of preplaced cells:- </summary>
+Defining the  locations of preplaced cells:-
 
 - Suppose we have a comb logic which has large number of gates.
 - It can be split into different blocks and can be reused when ever needed.  
@@ -257,11 +254,9 @@ Analysing the runs dir:-
 - Generally placed near the inputs.
 - surrounded by decoupling capacitors.
 
-</details>
 
 
-<details>
-  <summary>3. De-Coupling Capacitors:- </summary>
+### De-Coupling Capacitors:- 
 
 ![deco cap](https://github.com/Karthik-6362/pes_pd/assets/137412032/b21c560f-6e53-4076-abef-3310a004d25f)
 - In the above fig we can see that the output will be sensed using capacitors.
@@ -275,13 +270,6 @@ Analysing the runs dir:-
 - The chip after adding de-coupling cap for each block:-
 ![Screenshot 2023-09-13 185527](https://github.com/Karthik-6362/pes_pd/assets/137412032/7aed444c-924b-4527-9e2b-9d866dad661d)
 
-</details>
-
-<details>
-  <summary> </summary>
-
-
-</details>
 
 
 
