@@ -491,7 +491,16 @@ Grid size:-
 ![box](https://github.com/Karthik-6362/pes_pd/assets/137412032/66269745-c2a9-4a44-a0ec-2d040c0e7ffe)
 
 ### Transient analysis:- 
-![ta](https://github.com/Karthik-6362/pes_pd/assets/137412032/2781a3e1-b1f1-4341-af2f-2c01e043e464)
+
+Final .spice file:- 
+![spice file after editing](https://github.com/Karthik-6362/pes_pd/assets/137412032/ab78b402-38fe-4072-8c76-b2f045569623)
+
+Commands used:- 
+![graph execution](https://github.com/Karthik-6362/pes_pd/assets/137412032/316c3eb7-57a0-42d0-b549-79d64489f24d)
+
+output vs input:-
+![Op graph of inv](https://github.com/Karthik-6362/pes_pd/assets/137412032/f4278e1b-9ccb-4abd-8bb4-1240a6680bb4)
+
 
 </details>
 
