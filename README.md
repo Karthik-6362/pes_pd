@@ -464,6 +464,30 @@ Getting the layout:-
 Layout:-
 ![Screenshot 2023-09-18 120550](https://github.com/Karthik-6362/pes_pd/assets/137412032/35b67c12-255b-48f7-8fa6-148bbf974063)
 
+DRC Check:-
+To check for DRC Errors, select a region (left click for starting point, right click at end point) and see the DRC column at the top that shows how many DRC errors are present.The Details of DRC Errors will be printed on the console.
+![DRC](https://github.com/Karthik-6362/pes_pd/assets/137412032/305dd6f9-ed5d-4e2d-b8b8-c67fa77b0e82)
+
+
+Extracting PEX to SPICE with MAGIC
+```
+cd Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign
+magic -T sky130A.tech sky130_inv.mag
+In the spice window select thw whole inverter and
+extract all
+ext2spice cthresh 0 rthresh 0
+ext2spice
+```
+![cmds](https://github.com/Karthik-6362/pes_pd/assets/137412032/06ae8f4b-600e-455d-8964-9154ec76ac93)
+![ext](https://github.com/Karthik-6362/pes_pd/assets/137412032/66acc1fb-e197-417d-b185-a771384a543d)
+
+- Grid size
+- library for MOS
+- VDD, VSS,Input pulse 
+- type of analysis done
+
+Grid size:- 
+![box](https://github.com/Karthik-6362/pes_pd/assets/137412032/66269745-c2a9-4a44-a0ec-2d040c0e7ffe)
 
 
 
