@@ -489,7 +489,14 @@ ext2spice
 Grid size:- 
 ![box](https://github.com/Karthik-6362/pes_pd/assets/137412032/66269745-c2a9-4a44-a0ec-2d040c0e7ffe)
 
+### Transient analysis:- 
+![ta](https://github.com/Karthik-6362/pes_pd/assets/137412032/2781a3e1-b1f1-4341-af2f-2c01e043e464)
+
 </details>
+
+
+
+
 <details>
   <summary>Fabrication Process:- </summary>
 
