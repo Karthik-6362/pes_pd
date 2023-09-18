@@ -490,18 +490,6 @@ ext2spice
 Grid size:- 
 ![box](https://github.com/Karthik-6362/pes_pd/assets/137412032/66269745-c2a9-4a44-a0ec-2d040c0e7ffe)
 
-### Transient analysis:- 
-
-Final .spice file:- 
-![spice file after editing](https://github.com/Karthik-6362/pes_pd/assets/137412032/ab78b402-38fe-4072-8c76-b2f045569623)
-
-Commands used:- 
-![graph execution](https://github.com/Karthik-6362/pes_pd/assets/137412032/316c3eb7-57a0-42d0-b549-79d64489f24d)
-
-output vs input:-
-![Op graph of inv](https://github.com/Karthik-6362/pes_pd/assets/137412032/f4278e1b-9ccb-4abd-8bb4-1240a6680bb4)
-
-
 </details>
 
 
@@ -558,7 +546,56 @@ Certainly, here's a simplified summary of the CMOS inverter fabrication process:
 - Add a layer of Si3N4 as a protective dielectric.
 </details>
 
+<details>
+  <summary>Sky130 Tech File Labs:- </summary>
 
+### Transient analysis:- 
+
+Final .spice file:- 
+![spice file after editing](https://github.com/Karthik-6362/pes_pd/assets/137412032/ab78b402-38fe-4072-8c76-b2f045569623)
+
+Commands used:- 
+![graph execution](https://github.com/Karthik-6362/pes_pd/assets/137412032/316c3eb7-57a0-42d0-b549-79d64489f24d)
+
+output vs input:-
+![Op graph of inv](https://github.com/Karthik-6362/pes_pd/assets/137412032/f4278e1b-9ccb-4abd-8bb4-1240a6680bb4)
+
+
+- we download the tech files of the labs using  wget from ```http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz```
+![tech files](https://github.com/Karthik-6362/pes_pd/assets/137412032/5237b967-30f3-4bcd-a18f-079b589ffd50)
+
+We now have the files required for labs:- 
+opening met3.mag file in magic:- 
+![met3 mag file](https://github.com/Karthik-6362/pes_pd/assets/137412032/cd142115-a148-46c4-bfa3-abdd7d713615)
+
+The explaination for errors in the file can be found here(Eg: met3):- 
+``` https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html#m3 ```
+
+Drc rule violated for m3.2 :- 
+![drc rule violated for m3 2 ](https://github.com/Karthik-6362/pes_pd/assets/137412032/8c96542b-e2dd-46b7-9c69-e26e327b098b)
+
+Commands:- 
+- box    :- used to get the width and height of the selected box.
+- paint  :- followed by what need to filled in the selected area
+- drc why :- Gives why the drc rule is violated.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</details>
 
 # DAY_4:-
 
