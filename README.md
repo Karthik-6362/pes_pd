@@ -479,7 +479,8 @@ ext2spice cthresh 0 rthresh 0
 ext2spice
 ```
 ![cmds](https://github.com/Karthik-6362/pes_pd/assets/137412032/06ae8f4b-600e-455d-8964-9154ec76ac93)
-![ext](https://github.com/Karthik-6362/pes_pd/assets/137412032/66acc1fb-e197-417d-b185-a771384a543d)
+![ext](https://github.com/Karthik-6362/pes_pd/assets/137412032/bd9b2601-b3a1-4c46-8fa7-41f41f8d2178)
+
 
 - Grid size
 - library for MOS
