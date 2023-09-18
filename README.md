@@ -381,6 +381,106 @@ sub circuit file contains the actual PMOS and NMOS models
 </details>
 
 
+<details>
+  <summary> General timing characterization parameters:- </summary>
+### Timing threshold definitions:- 
+- slew_low_rise_thr :- 20% from bottom power supply when the signal is rising
+- slew_high_rise_thr :- 20% from top power supply when the signal is rising
+- slew_low_fall_thr :- 20% from bottom power supply when the signal is falling
+- slew_high_fall_thr :- 20% from top power supply when the signal is falling
+- in_rise_thr :- 50% point on the rising edge of input
+- in_fall_thr :- 50% point on the falling edge of input
+- out_rise_thr :- 50% point on the rising edge of ouput
+- out_fall_thr :- 50% point on the falling edge of ouput
+
+
+### Propogation delay:-
+Propogation delay = time(out_fall_thr) - time(in_rise_thr)
+
+### Transition Time:-
+On rise: time(slew_high_rise_thr) - time(slew_low_rise_thr)
+On fall : time(slew_high_fall_thr) - time(slew_low_fall_thr)
+
+</details>
+
+# DAY_3:-  Design library cell using Magic Layout and ngspice characterization
+
+<details>
+  <summary>Labs for CMOS inverter ngspice simulations:- </summary>
+
+#### SPICE deck creation for CMOS inverter:-
+SPICE deck contains the :-
+- Connectivity Information
+- Component values
+- Nodes
+- Node names
+
+Deck file:- 
+*** MODEL DESCRIPTIONS ***
+*** NETLIST DESCRIPTION ***
+M1 out in vdd vdd pmos W=0.375u L=0.25u
+M2 out in 0 0 nmos W=0.375u L=0.25u
+
+cload out 0 10f
+
+Vdd vdd 0 2.5
+Vin in 0 2.5
+
+*** SIMULATION Commands ***
+.op
+.dc Vin 0 2.5 0.05
+*** include tsmc_025um_model.mod ***
+.LIB "tsmc_025um_models.mod" CMOS_MODELS
+.end
+
+
+SPICE Simulation commands:- 
+```
+cd .cir file location>
+source CMOS_INVERTER.cir
+run
+setplot
+dc1
+display
+plot out vs in
+```
+
+![op](https://github.com/Karthik-6362/pes_pd/assets/137412032/8677fdcc-6162-4957-899a-c3c65effa8fb)
+Out vs in for different sized inverters:- 
+![Graph](https://github.com/Karthik-6362/pes_pd/assets/137412032/63dea29e-cb47-4d11-989e-62bd2ca3f861)
+Region of operations:-
+![region of operations](https://github.com/Karthik-6362/pes_pd/assets/137412032/16415a9d-68b2-4a18-b95a-c04679294582)
+
+In this lab session we will be gitcloning doc files for pmos and nmos spice models
+after git cloning it creates a vsdstandard cell design file in openlane.
+``` git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+```
+```
+Copy the tech file into the same folder.
+magic -T sky130A.tech sky130_inv.mag &
+```
+Getting the layout:-
+![Screenshot 2023-09-18 120536](https://github.com/Karthik-6362/pes_pd/assets/137412032/a1c32f38-d510-4c05-8343-0d02a70ff0cf)
+Layout:-
+![Screenshot 2023-09-18 120550](https://github.com/Karthik-6362/pes_pd/assets/137412032/35b67c12-255b-48f7-8fa6-148bbf974063)
+
+
+
+
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
