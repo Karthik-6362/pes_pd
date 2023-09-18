@@ -489,9 +489,56 @@ ext2spice
 Grid size:- 
 ![box](https://github.com/Karthik-6362/pes_pd/assets/137412032/66269745-c2a9-4a44-a0ec-2d040c0e7ffe)
 
+</details>
+<details>
+  <summary>Fabrication Process:- </summary>
 
+Certainly, here's a simplified summary of the CMOS inverter fabrication process:
 
+**1. Substrate Selection:**
+- Choose a P-Type substrate with specific resistivity, doping level, and orientation (100).
 
+**2. Create Active Regions:**
+- Grow a layer of SiO2 (~40nm).
+- Deposit Si3N4 (~80nm) on SiO2.
+- Apply a 1μm layer of photoresist to define regions.
+- Use photolithography to define patterns.
+- Etch out Si3N4 and SiO2 layers.
+- Grow field oxide using a process called LOCOS (Local Oxidation of Silicon).
+- Etch out Si3N4 using hot phosphoric acid.
+
+**3. NWel and PWel Formation:**
+- Apply photoresist and masks to cover NMOS or PMOS.
+- Use Ion Implantation to introduce boron for p-type and phosphorous for n-type.
+- Increase well depth through high-temperature furnace annealing.
+
+**4. Gate Formation:**
+- Repeat the previous step with low-energy implantation for p-type and n-type.
+- Etch and regrow SiO2 to form a high-quality oxide.
+- Apply N-type ion implants for low gate resistance.
+- Use masks for precise gate formation.
+
+**5. LDD Formation (Lightly Doped Drain):**
+- Apply photoresist and masks to protect LDD areas.
+- Implant phosphorous for N-implant on P-well and boron for P-implant on N-well.
+- Deposit SiO2 and etch to create side wall spacers.
+
+**6. Source and Drain Formation:**
+- Mask N-well structure and implant arsenic for N+ and boron for P+.
+- Anneal to achieve the required implant thickness.
+
+**7. Contacts and Interconnects:**
+- Etch thin SiO2 oxide.
+- Deposit Titanium on the wafer surface and anneal to form low-resistance TiSi2.
+- Use TiN for local communication and etch off around gate structures.
+- Create contact pins using Al, W, and TiN depositions.
+
+**8. Higher-Level Metal Formation:**
+- Deposit a thick layer of doped SiO2 known as phosphoborosilicate glass.
+- Use Chemical Mechanical Polishing (CMP) to flatten the surface.
+- Create contact holes.
+- Deposit additional metal layers as needed.
+- Add a layer of Si3N4 as a protective dielectric.
 </details>
 
 
