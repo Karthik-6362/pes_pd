@@ -348,6 +348,8 @@ Standard cells:-
 
 - standard cells are kept in the libraries,its also consists of different sizes,threshold voltage and delays of the same component.
 ![std cells](https://github.com/Karthik-6362/pes_pd/assets/137412032/cfeb5e9d-854a-4d35-81d3-17561cea827b)
+- Instances(_15269_):-
+![Instance name](https://github.com/Karthik-6362/pes_pd/assets/137412032/2e997d3c-1c2e-4c1d-ba53-f611eb66f9fd)
 
 CELL DESIGN FLOW:- 
 - inputs      : inputs needed to design the inverter(based pn PDK's).
