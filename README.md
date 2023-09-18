@@ -1,4 +1,4 @@
-# ADVANCED PHYSICAL DESIGN USING OPENLANE/SKY130
+![missing rule added](https://github.com/Karthik-6362/pes_pd/assets/137412032/0d0a55ba-dc77-4428-8f9f-932e0bd147f7)# ADVANCED PHYSICAL DESIGN USING OPENLANE/SKY130
 
 ## Openlane:- OpenLane is an open-source digital ASIC (Application-Specific Integrated Circuit) design flow framework. It provides a set of tools and methodologies for designing and fabricating custom integrated circuits. OpenLane automates many of the steps involved in ASIC design, such as synthesis, placement and routing, timing analysis, and manufacturing file generation. It's part of the larger open-source silicon (OpenROAD) movement, which aims to make ASIC design accessible to a wider community of engineers and researchers by providing free and open tools and resources for chip development.
 
@@ -577,11 +577,35 @@ Drc rule violated for m3.2 :-
 ![drc rule violated for m3 2 ](https://github.com/Karthik-6362/pes_pd/assets/137412032/8c96542b-e2dd-46b7-9c69-e26e327b098b)
 
 Commands:- 
-- box    :- used to get the width and height of the selected box.
-- paint  :- followed by what need to filled in the selected area
+- box     :- used to get the width and height of the selected box.
+- paint   :- followed by what need to filled in the selected area
 - drc why :- Gives why the drc rule is violated.
+- cif see VIA2:- Fills the selected area with the contact cuts.
+- what    :- Will give what type of layer is selected object.
+- drc check:- Checks for DRC errors.
 
+Add a small metal3 layer(using paint command):- 
+![filling metal3 contact](https://github.com/Karthik-6362/pes_pd/assets/137412032/dcac59fc-aa9d-45e8-b7e7-9c79374f2c6c)
 
+Adding contact cuts:- 
+![filling metal3 contact](https://github.com/Karthik-6362/pes_pd/assets/137412032/b1f15e1c-b5b7-488c-a7ef-86a8291af639)
+
+- The rules are followed from the above mentioned website.
+
+Loading poly.mag file onto magic:- 
+![Load poly mag](https://github.com/Karthik-6362/pes_pd/assets/137412032/ac6403d2-885f-4184-a760-c8e423c2494f)
+
+Finding the error:- 
+Using the mouse select the area in b/w the ploy layers.
+Use box command to get the measurement :-
+![poly finding error](https://github.com/Karthik-6362/pes_pd/assets/137412032/f9b0d07a-8d1e-4fd6-98bc-5e6ca3ee2b45)
+
+Missing rule added:-
+![missing rule added](https://github.com/Karthik-6362/pes_pd/assets/137412032/cec37c52-e6eb-
+4267-8ebc-8be2aa853ed2)
+
+Running the DRC check again after loading the edited tech file:- 
+![poly error fixed](https://github.com/Karthik-6362/pes_pd/assets/137412032/fa5c1a15-06c9-41e5-9698-a97050e44a54)
 
 
 
