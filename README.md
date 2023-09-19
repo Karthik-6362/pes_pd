@@ -735,10 +735,34 @@ Generated report:-
 </details>
 
 
+# DAY_5:-
+<details>
+  <summary>Power Distribution Network and Routing:-</summary>
+  
+Once the clock tree network has been generated and post-routing static timing analysis (STA) checks have been successfully verified in the OpenLANE design flow, the next step is to create the power distribution network (PDN) using the `gen_pdn` feature. The PDN feature in OpenLANE serves several essential functions:
+1. **Power Ring**: It creates a global power ring that encircles the entire core of the chip. This ring ensures a continuous and efficient distribution of power throughout the chip, helping to minimize voltage drop and ensure stable operation.
+2. **Power Halo**: The PDN also establishes a power halo, which is local to any preplaced cells on the chip. Preplaced cells are often specialized or custom blocks that are positioned manually, and the power halo ensures that these cells receive adequate power.
+3. **Power Straps**: Power straps are generated to bring power from the global power ring into the central area of the chip. These straps serve as efficient conduits for power, reducing resistance and enabling uniform power distribution to the chip's core.
+4. **Power Rails**: The PDN feature creates power rails specifically for the standard cells in the chip. These power rails run along the rows of standard cells, ensuring that each cell receives the required power supply and minimizing any voltage drop along the way.
+
+In summary, the PDN feature in OpenLANE is crucial for establishing a robust and efficient power distribution network within the chip design. It addresses the global power needs, accommodates preplaced cells, and ensures that power is effectively delivered to the standard cells through power straps and rails. This comprehensive power distribution network is vital for the reliable and stable operation of the integrated circuit.
+
+![power](https://github.com/Karthik-6362/pes_pd/assets/137412032/801db685-8661-4cf9-8a4b-9da5ed013ed8)
+
+In OpenLANE's design flow, routing is a crucial step divided into two stages:
+**Global Routing**: During this stage, routing guides are generated for the interconnects in our netlist. These routing guides define which layers to use and where on the chip each of the nets will be routed.
+**Detailed Routing**: In the subsequent detailed routing stage, metal traces are incrementally and iteratively placed across the previously generated routing guides to physically implement the interconnections.
+
+SPEF Extraction:-
+```
+cd /Desktop/work/tools/SPEF_EXTRACTOR
+python3 main.py <merged.lef location> <location od .def in routing>
+```
+The SPEF file is generated in the location of the .def file
 
 
 
-
+</details>
 
 
 
