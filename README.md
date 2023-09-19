@@ -1,4 +1,4 @@
-Advanced Physical Design using openlane & sky130 Installation
+# Advanced Physical Design using openlane & sky130 Installation
 
 ## Openlane:- OpenLane is an open-source digital ASIC (Application-Specific Integrated Circuit) design flow framework. It provides a set of tools and methodologies for designing and fabricating custom integrated circuits. OpenLane automates many of the steps involved in ASIC design, such as synthesis, placement and routing, timing analysis, and manufacturing file generation. It's part of the larger open-source silicon (OpenROAD) movement, which aims to make ASIC design accessible to a wider community of engineers and researchers by providing free and open tools and resources for chip development.
 <details>
@@ -667,33 +667,41 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ![Layout after modifying](https://github.com/Karthik-6362/pes_pd/assets/137412032/db04be0f-7512-4e21-995c-67f403046a9b)
 
 ### Timing Analysis with Ideal Clocks using OpenSTA:-
+<details>
+  <summary>Timing Modelling using Delay Tables:-</summary>
+We need create two files
+- in the openlane directory('pre_sta.conf' file).
+- in 'src/sky130' directory of the picorv32a( my_base.sdc file).
 
+Running synthesis:- 
+``` sta pre_sta.conf ```
+
+</details>
+
+
+<details>
+  <summary>Delay tables and timing analysis with ideal clocks using openSTA</summary>
+  
 Delay tables, also referred to as delay models, play a pivotal role within the realm of digital circuit design and analysis. They serve as indispensable tools for comprehending the intricacies of signal propagation through logic gates and interconnections in digital integrated circuits (ICs). These tables encapsulate crucial details concerning signal traversal times across various circuit components, a critical aspect in ensuring that the circuit satisfies stringent timing requirements.
-
 Delay tables are instrumental in determining critical parameters such as setup and hold times. Their primary functions encompass:
-
 1. Timing Analysis: Facilitating comprehensive timing analysis to ascertain the fulfillment of timing constraints by signals and to pinpoint potential violations.
-
 2. Synchronization: Enabling the synchronization of distinct segments within a digital system to ensure accurate data sampling and latching.
-
 3. Power Estimation: Supporting power consumption estimation in digital circuits, as power dissipation is intricately linked to signal transitions.
-
 Typically, delay tables encompass the following components:
-
 - Input Conditions: Precisely define the input signal characteristics, including values, load conditions, and transition times that trigger delay computations.
-
 - Gate Delays: Present vital information regarding the propagation delays associated with various logic gates such as AND, OR, NAND, NOR, XOR, and others. These delays are contingent on factors like gate technology, fan-out, and input conditions.
-
 - Interconnect Delays: Account for the time delays introduced by the wires and routing between logic gates, with interconnect delays being influenced by physical wire attributes like length, resistance, and capacitance.
-
 - Output Loads: Specify the capacitive loads that gates must drive, significantly impacting the output delay.
 
-Incorporating delay tables into the design process involves:
-
+  Incorporating delay tables into the design process involves:
 - Setup Timing Analysis: Establishing the foundations for critical timing analysis, ensuring that data signals meet the required setup time constraints at the inputs of sequential elements (e.g., flip-flops) in a digital system. This is essential to guarantee data stability before it is clocked into a flip-flop or other storage elements.
-
 - Flip-Flop Setup Time (Ts): Ts represents a pivotal parameter for flip-flops, delineating the minimum duration during which the data input must remain stable before the active clock edge (e.g., rising edge) for reliable data storage.
 
+
+
+
+
+</details>
 
 
 
