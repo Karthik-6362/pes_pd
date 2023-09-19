@@ -684,11 +684,9 @@ Running synthesis:-
 - The slack is violated:- Bcz the value of ``` SYNTH_MAX_FANOUT ``` value is high
 - We change iots value to 4 and re-run.
 - 
-</details>
 
 
-<details>
-  <summary>Delay tables and timing analysis with ideal clocks using openSTA</summary>
+Delay tables and timing analysis with ideal clocks using openSTA:- 
   
 Delay tables, also referred to as delay models, play a pivotal role within the realm of digital circuit design and analysis. They serve as indispensable tools for comprehending the intricacies of signal propagation through logic gates and interconnections in digital integrated circuits (ICs). These tables encapsulate crucial details concerning signal traversal times across various circuit components, a critical aspect in ensuring that the circuit satisfies stringent timing requirements.
 Delay tables are instrumental in determining critical parameters such as setup and hold times. Their primary functions encompass:
@@ -704,9 +702,9 @@ Typically, delay tables encompass the following components:
   Incorporating delay tables into the design process involves:
 - Setup Timing Analysis: Establishing the foundations for critical timing analysis, ensuring that data signals meet the required setup time constraints at the inputs of sequential elements (e.g., flip-flops) in a digital system. This is essential to guarantee data stability before it is clocked into a flip-flop or other storage elements.
 - Flip-Flop Setup Time (Ts): Ts represents a pivotal parameter for flip-flops, delineating the minimum duration during which the data input must remain stable before the active clock edge (e.g., rising edge) for reliable data storage.
-
-
-## Clock tree Synthesis :- 
+</details>
+<details>
+  <summary>Clock tree Synthesis :- </summary>
 
 ``` run_ct ``` :- Used to run the clock tree synthesis
 - This crestes a new picorv32a.synthesis.v file in the results/synthesis directory
