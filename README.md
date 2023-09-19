@@ -681,7 +681,8 @@ We need create two files
 
 Running synthesis:- 
 ``` sta pre_sta.conf ```
-- The slock is violated:-
+- The slack is violated:- Bcz the value of ``` SYNTH_MAX_FANOUT ``` value is high
+- We change iots value to 4 and re-run.
 - 
 </details>
 
@@ -705,8 +706,14 @@ Typically, delay tables encompass the following components:
 - Flip-Flop Setup Time (Ts): Ts represents a pivotal parameter for flip-flops, delineating the minimum duration during which the data input must remain stable before the active clock edge (e.g., rising edge) for reliable data storage.
 
 
+## Clock tree Synthesis :- 
+
+``` run_ct ``` :- Used to run the clock tree synthesis
+- This crestes a new picorv32a.synthesis.v file in the results/synthesis directory
 
 
+
+ 
 
 </details>
 
