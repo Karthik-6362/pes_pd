@@ -1,4 +1,4 @@
-# Advanced Physical Design using openlane & sky130 Installation
+![clk generated'](https://github.com/Karthik-6362/pes_pd/assets/137412032/56ebc416-1b9f-4d36-8de6-af7c47a06e4f)# Advanced Physical Design using openlane & sky130 Installation
 
 ## Openlane:- OpenLane is an open-source digital ASIC (Application-Specific Integrated Circuit) design flow framework. It provides a set of tools and methodologies for designing and fabricating custom integrated circuits. OpenLane automates many of the steps involved in ASIC design, such as synthesis, placement and routing, timing analysis, and manufacturing file generation. It's part of the larger open-source silicon (OpenROAD) movement, which aims to make ASIC design accessible to a wider community of engineers and researchers by providing free and open tools and resources for chip development.
 <details>
@@ -671,8 +671,6 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 </details>
 
 
-
-### Timing Analysis with Ideal Clocks using OpenSTA:-
 <details>
   <summary>Timing Modelling using Delay Tables:-</summary>
 We need create two files
@@ -682,8 +680,9 @@ We need create two files
 Running synthesis:- 
 ``` sta pre_sta.conf ```
 - The slack is violated:- Bcz the value of ``` SYNTH_MAX_FANOUT ``` value is high
-- We change iots value to 4 and re-run.
-- 
+- We change its value to 4 and re-run.
+![Slack violated](https://github.com/Karthik-6362/pes_pd/assets/137412032/fff54b32-74dd-463c-88a7-393b6da1f820)
+
 
 
 Delay tables and timing analysis with ideal clocks using openSTA:- 
@@ -702,16 +701,36 @@ Typically, delay tables encompass the following components:
   Incorporating delay tables into the design process involves:
 - Setup Timing Analysis: Establishing the foundations for critical timing analysis, ensuring that data signals meet the required setup time constraints at the inputs of sequential elements (e.g., flip-flops) in a digital system. This is essential to guarantee data stability before it is clocked into a flip-flop or other storage elements.
 - Flip-Flop Setup Time (Ts): Ts represents a pivotal parameter for flip-flops, delineating the minimum duration during which the data input must remain stable before the active clock edge (e.g., rising edge) for reliable data storage.
+
 </details>
+
+
+
 <details>
   <summary>Clock tree Synthesis :- </summary>
 
 ``` run_ct ``` :- Used to run the clock tree synthesis
-- This crestes a new picorv32a.synthesis.v file in the results/synthesis directory
+- This creates a new picorv32a.synthesis_cts.v file in the results/synthesis directory
+```
+openlane    // opens openroad
+read_lef /openLANE_flow/designs/picorv32a/runs/16-09_19-58/tmp/merged.lef  // Used to read the merged .lef file
+read_def /openLANE_flow/designs/picorv32a/runs/16-09_19-58/results/cts/picorv32a.cts.def  // Reading the .def file
 
+write_db pico_cts.db
+read_db pico_cts.db
+read_verilog /openLANE_flow/designs/picorv32a/runs/16-09_19-58/results/synthesis/picorv32a.synthesis_cts.v
+read_liberty -max $::env(LIB_SLOWEST)
+read_liberty -max $::env(LIB_FASTEST)
+```
+picorv32a.synthesis_cts.v  will be created
 
-
- 
+```
+read_sdc /openLANE_flow/designs/picorv32a/src/sky130/my_base.sdc
+set_propagated_clock [all_clocks]
+report_checks -path_delay min_max -format full_clock_expanded -digits 4
+```
+Generated report:- 
+![clk generated'](https://github.com/Karthik-6362/pes_pd/assets/137412032/3537f475-52c9-4af2-bfa4-3e8f00d7f893)
 
 </details>
 
