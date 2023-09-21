@@ -669,7 +669,8 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ![Layout after modifying](https://github.com/Karthik-6362/pes_pd/assets/137412032/db04be0f-7512-4e21-995c-67f403046a9b)
 
 vsd_inv:- 
-![vsdinv](https://github.com/Karthik-6362/pes_pd/assets/137412032/3c152cf2-f1cd-46b3-93a7-bdf02b6a52b5)
+![vsdinv](https://github.com/Karthik-6362/pes_pd/assets/137412032/4392bca5-065e-4321-b1b5-5f877328084b)
+
 
 </details>
 
