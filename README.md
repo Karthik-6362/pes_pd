@@ -738,7 +738,31 @@ Generated report:-
 # DAY_5:-
 <details>
   <summary>Power Distribution Network and Routing:-</summary>
+
+### Introduction to Maze routing
   
+- Maze routing is a method used in electronic design automation (EDA) and integrated circuit (IC) design to determine efficient paths for interconnecting various components, such as logic gates, on a chip's layout. The goal is to find a path through a maze-like grid of obstacles while optimizing for factors like wire length, signal delay, and area utilization.
+
+- Lee's algorithm, also known as Lee's breadth-first search (BFS) algorithm, is a graph traversal and pathfinding algorithm that is commonly used in maze routing, maze solving, and other grid-based problems. Named after its creator, C. Y. Lee, the algorithm is particularly useful for finding the shortest path between two points in a grid while exploring the grid layer by layer.
+
+## DRC
+
+- Lambda rules are process-specific design rules used in semiconductor manufacturing to ensure that integrated circuit (IC) layouts adhere to the capabilities and constraints of a particular semiconductor process. These rules are expressed in terms of lambda (λ), a normalized unit of measurement relative to the process technology. Lambda rules can vary between semiconductor foundries and process nodes, but they typically cover various aspects of IC design. Here's a list of common lambda rules and design considerations:
+
+  - Minimum Feature Size: Specifies the minimum allowed width and spacing for features such as transistors, metal tracks, and vias, often expressed as multiples of λ.
+  - Aspect Ratio: Defines the acceptable aspect ratio (width-to-height ratio) for rectangular structures, ensuring manufacturability.
+  - Metal Layer Constraints: Specifies minimum metal track widths, metal-to-metal spacings, and via sizes on metal layers.
+  - Poly Pitch: Defines the minimum pitch (spacing between features) for the poly-silicon (poly) layer, which affects the size of transistors and gates.
+  - Active Area Constraints: Specifies minimum active area dimensions, ensuring that transistors meet process requirements.
+  - Well and Substrate Taps: Covers the placement and size of well and substrate taps for connecting to power and ground planes.
+  - Gate Length: Specifies the minimum gate length for transistors, affecting their performance characteristics.
+  - Contact and Via Rules: Defines the minimum size and spacing of contacts and vias used to connect different layers in the IC.
+  - Local Interconnects: Provides rules for local interconnects, which are used for routing within a cell or macro.
+  - Minimum Metal to Active Spacing: Sets the minimum separation between metal tracks and active areas.
+  - Minimum Metal to Contact Spacing: Specifies the minimum distance between metal tracks and contacts.
+
+##  Routing:-
+
 Once the clock tree network has been generated and post-routing static timing analysis (STA) checks have been successfully verified in the OpenLANE design flow, the next step is to create the power distribution network (PDN) using the `gen_pdn` feature. The PDN feature in OpenLANE serves several essential functions:
 1. **Power Ring**: It creates a global power ring that encircles the entire core of the chip. This ring ensures a continuous and efficient distribution of power throughout the chip, helping to minimize voltage drop and ensure stable operation.
 2. **Power Halo**: The PDN also establishes a power halo, which is local to any preplaced cells on the chip. Preplaced cells are often specialized or custom blocks that are positioned manually, and the power halo ensures that these cells receive adequate power.
@@ -752,6 +776,12 @@ In summary, the PDN feature in OpenLANE is crucial for establishing a robust and
 In OpenLANE's design flow, routing is a crucial step divided into two stages:
 **Global Routing**: During this stage, routing guides are generated for the interconnects in our netlist. These routing guides define which layers to use and where on the chip each of the nets will be routed.
 **Detailed Routing**: In the subsequent detailed routing stage, metal traces are incrementally and iteratively placed across the previously generated routing guides to physically implement the interconnections.
+
+![1](https://github.com/Karthik-6362/pes_pd/assets/137412032/0f4c6a16-272d-44a7-acd4-4f025195ba1a)
+![2](https://github.com/Karthik-6362/pes_pd/assets/137412032/e74a7ac5-9a6a-4347-9331-90ad98424dc5)
+
+Change in def:- 
+![3](https://github.com/Karthik-6362/pes_pd/assets/137412032/1590089a-3de0-41db-9cf7-f1baa2bfc097)
 
 SPEF Extraction:-
 ```
