@@ -1,4 +1,4 @@
-# Advanced Physical Design using OpenLANE/Sky130
+![vsdinv](https://github.com/Karthik-6362/pes_pd/assets/137412032/1cc4914f-6889-4df5-b447-eef6557d556a)# Advanced Physical Design using OpenLANE/Sky130
 
 ## Openlane:- OpenLane is an open-source digital ASIC (Application-Specific Integrated Circuit) design flow framework. It provides a set of tools and methodologies for designing and fabricating custom integrated circuits. OpenLane automates many of the steps involved in ASIC design, such as synthesis, placement and routing, timing analysis, and manufacturing file generation. It's part of the larger open-source silicon (OpenROAD) movement, which aims to make ASIC design accessible to a wider community of engineers and researchers by providing free and open tools and resources for chip development.
 <details>
@@ -667,6 +667,9 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 // To voew the design using magic
 ```
 ![Layout after modifying](https://github.com/Karthik-6362/pes_pd/assets/137412032/db04be0f-7512-4e21-995c-67f403046a9b)
+
+vsd_inv:- 
+![vsdinv](https://github.com/Karthik-6362/pes_pd/assets/137412032/3c152cf2-f1cd-46b3-93a7-bdf02b6a52b5)
 
 </details>
 
